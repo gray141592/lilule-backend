@@ -1,0 +1,13 @@
+version: '3'
+services:
+  postgres:
+    container_name: lilule-postgres
+    image: postgres:10.10
+    ports:
+      - '35432:5432'
+    environment:
+      POSTGRES_USER: lilule
+      POSTGRES_PASSWORD: lilule
+      POSTGRES_DB: lilule
+    volumes:
+      - '/tmp/lilule_pg_data:/var/lib/postgresql'
